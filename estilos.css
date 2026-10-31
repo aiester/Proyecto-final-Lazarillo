@@ -1,0 +1,177 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #172b3a;
+  background: #f3f6f7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: min(100% - 2rem, 860px);
+  margin-inline: auto;
+}
+
+.site-header {
+  padding: 3.5rem 0 3rem;
+  color: #fff;
+  background: #173d4d;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: #28647a;
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.site-header .eyebrow {
+  color: #d3edf2;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 700px;
+  margin-bottom: 0.75rem;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.12;
+}
+
+.site-header p:last-child {
+  margin-bottom: 0;
+  color: #e2edf0;
+  font-size: 1.05rem;
+}
+
+main {
+  flex: 1;
+  padding-block: 2.5rem;
+}
+
+.results {
+  padding: clamp(1.25rem, 4vw, 2rem);
+  border: 1px solid #d5e0e4;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 0.75rem 2rem rgb(23 61 77 / 8%);
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+}
+
+.status {
+  padding: 0.4rem 0.7rem;
+  border-radius: 999px;
+  color: #174b37;
+  background: #e6f4ec;
+  font-size: 0.88rem;
+  font-weight: 650;
+}
+
+.status[data-state="error"] {
+  color: #8a2020;
+  background: #fff0ef;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid #d5e0e4;
+  border-radius: 0.65rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #e1e8eb;
+}
+
+thead {
+  color: #fff;
+  background: #24566a;
+}
+
+th:last-child,
+td:last-child {
+  width: 9rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+tbody tr:nth-child(even) {
+  background: #f6f9fa;
+}
+
+.placeholder {
+  color: #405562;
+  text-align: center;
+}
+
+footer {
+  padding-block: 1.25rem;
+  color: #334b58;
+  background: #e8eef0;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 540px) {
+  .site-header {
+    padding-block: 2.5rem;
+  }
+
+  main {
+    padding-block: 1.5rem;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  th,
+  td {
+    padding: 0.75rem;
+  }
+}

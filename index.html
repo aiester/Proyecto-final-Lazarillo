@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Recuento de palabras, letras y personajes de Lazarillo de Tormes.">
+  <title>Analizador de Lazarillo de Tormes</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <p class="eyebrow">Herramienta de lectura</p>
+      <h1>Analizador de <cite>Lazarillo de Tormes</cite></h1>
+      <p>Recuento automático de palabras, letras y menciones literales en el texto.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="results" aria-labelledby="results-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Resultados</p>
+          <h2 id="results-title">Recuento del texto</h2>
+        </div>
+        <span id="status" class="status" role="status" aria-live="polite">Cargando el texto…</span>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Elemento</th>
+              <th scope="col">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody id="results-body">
+            <tr><td colspan="2" class="placeholder">Preparando el recuento…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>El análisis se realiza en tu navegador; el texto no se envía a ningún servidor.</p>
+    </div>
+  </footer>
+
+  <script src="contador.js"></script>
+</body>
+</html>
